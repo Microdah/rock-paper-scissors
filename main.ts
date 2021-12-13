@@ -1,7 +1,13 @@
-let hand = 0
 input.onGesture(Gesture.Shake, function () {
     hand = randint(1, 3)
     if (hand == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
         basic.showLeds(`
             . . . . .
             . # # # .
@@ -11,6 +17,13 @@ input.onGesture(Gesture.Shake, function () {
             `)
     } else if (hand == 2) {
         basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
             # # # # #
             # . . . #
             # . . . #
@@ -18,6 +31,13 @@ input.onGesture(Gesture.Shake, function () {
             # # # # #
             `)
     } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
         basic.showLeds(`
             # # . . #
             # # . # .
@@ -27,6 +47,28 @@ input.onGesture(Gesture.Shake, function () {
             `)
     }
 })
+let hand = 0
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # . . #
+    # # . # .
+    . . # . .
+    # # . # .
+    # # . . #
+    `)
 basic.forever(function () {
 	
 })
